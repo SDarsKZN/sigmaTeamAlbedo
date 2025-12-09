@@ -54,6 +54,8 @@ def readIntensity(photoName, plotName, lamp, surface):
     plt.ylim(0, 150)
     plt.legend()
 
+    background = (background * 0.7).astype(np.uint8)
+
     plt.imshow(background, origin='lower')
 
     plt.savefig(plotName)
@@ -64,6 +66,6 @@ readIntensity("GREEN.jpg", "график_зелёный.png", "Ртутная л
 #readIntensity("WHITE.jpg", "график_белый.png", "Лампа накаливания", "Белая поверхность")
 readIntensity("BLUE.jpg", "график_синий.png", "Лампа накаливания", "Синяя поверхность")
 readIntensity("RED.jpg", "график_красный.png", "Лампа накаливания", "Красная поверхность")
-readIntensity("RTUT.jpg", "график_ртуть2.png", "Ртутная лампа", "Эталонная поверхность (Ртуть)")
+readIntensity("RTUT2.jpg", "график_ртуть2.png", "Ртутная лампа", "Эталонная поверхность (Ртуть)")
 readIntensity("YELLOW.jpg", "график_желтый.png", "Лампа накаливания", "Жёлтая поверхность")
 readIntensity("WHITE_REFERENC.jpg", "график_эталон.png", "Лампа накаливания", "Эталонная белая поверхность")
